@@ -19,10 +19,9 @@ from django.contrib.auth import views as auth_views
 from . import views
 
 urlpatterns = [
-    url(r'^profile/', include('user_profiles.urls')),
     url(r'^$', views.index, name="HomePage"),
-    url(r'^music/', include('music.urls')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^music/', include('music.urls'), name='music'),
+    url(r'^admin/', admin.site.urls, name='admin'),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
 ]

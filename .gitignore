@@ -1,0 +1,25 @@
+# setting files
+band/settings.py
+
+# Compiled Files #
+#################
+
+*.pyc
+*.swo
+*.swp
+*.swn
+
+# Hidden files #
+################
+
+# .*
+.idea/*
+
+# OS generated files #
+######################
+
+.DS_Store
+ehthumbs.db
+Icon
+Thumbs.db
+
