@@ -50,10 +50,10 @@
                 </button>
                 <a class="navbar-brand" href="." onclick="window.location.reload(true);">Tunez</a>
             </div>
-            <div style="padding-left: 23%; padding-top: 0.30%" class="col-md-10">
-                <form class="navbar-form" role="search">
+            <div class="col-md-10 search_bar_top">
+                <form class="navbar-form search_bar" role="search">
                     <div class="col-md-11 btn-group">
-                        <input style="width: 80%" type="text" placeholder="Search artists,audios,videos,events,announcements,messages here" name="q">
+                        <input class="search_input" type="text" placeholder="Search artists, audios, videos, events, announcements, messages here...." name="q">
                             <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
                         <!--
                         <button class="col-md-1" type="submit"><i class="glyphicon glyphicon-search"></i></button>
@@ -102,37 +102,42 @@
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href=""><i class="fa fa-fw fa-home"></i> Profile </a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa fa-fw fa-rss"></i> Feeds</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa fa-fw fa-map-marker"></i> Location</a>
-                    </li>
-                </ul>
+                <div class="nav" id="side-bar">
+                    <ul class="nav navbar-nav side-nav">
+                        <li class="active">
+                            <a href=""><i class="fa fa-fw fa-home"></i> Profile </a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-rss"></i> Feeds</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-map-marker"></i> Location</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
             <!-- /.navbar-collapse -->
         </nav>
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
 
 
-                {% block content %}
-
-                {% endblock %}
-
-            </div>
-            <!-- /.container -->
-
-        </div>
-        <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
+
+    <div class="main_page">
+        <div id="page-wrapper">
+
+            {% block content %}
+
+            {% endblock %}
+        </div>
+            <!-- /#page-wrapper -->
+    </div>
+    <!-- /.container -->
+
+
+
 
     <!-- jQuery -->
     <script src="{% static 'js/jquery.js' %}"></script>
